@@ -1,68 +1,163 @@
 {
   "Actor": {
-    "types": ["character"],
+    "types": ["character", "npc"],
     "templates": {
       "base": {
-        "health": {
-          "value": 10,
-          "min": 0,
-          "max": 10
+        "name": "new character",
+        "abilities": {
+          "acc": {
+            "value": 0,
+            "focuses": []
+          },
+          "com": {
+            "value": 0,
+            "focuses": []
+          },
+          "con": {
+            "value": 0,
+            "focuses": []
+          },
+          "dex": {
+            "value": 0,
+            "focuses": []
+          },
+          "fig": {
+            "value": 0,
+            "focuses": []
+          },
+          "int": {
+            "value": 0,
+            "focuses": []
+          },
+          "per": {
+            "value": 0,
+            "focuses": []
+          },
+          "str": {
+            "value": 0,
+            "focuses": []
+          },
+          "wil": {
+            "value": 0,
+            "focuses": []
+          }
         },
-        "power": {
-          "value": 5,
-          "min": 0,
-          "max": 5
-        }
+        "conditions":[],
+        "talents": [],
+        "specializations": [],
+        "equipment": {
+          "weapons": [],
+          "armor": [],
+          "gear"
+        },
+        "favored stunts": []
       }
     },
     "character": {
       "templates": ["base"],
-      "biography": "",
       "attributes": {
         "level": {
           "value": 1
+        },
+        "xp": {
+          "value": 0
+        },
+        "income": {
+          "value": 0
+        },
+        "fortune": {
+          "value": 15
         }
       },
-      "abilities": {
-        "str": {
-          "value": 10
-        },
-        "dex": {
-          "value": 10
-        },
-        "con": {
-          "value": 10
-        },
-        "int": {
-          "value": 10
-        },
-        "wis": {
-          "value": 10
-        },
-        "cha": {
-          "value": 10
+      "biography": {
+        "physical description": "",
+        "origin": "",
+        "background": "",
+        "social class": "",
+        "profession": "",
+        "drive": "",
+        "goals": "",
+        "relationships": {
+          "ties": [],
+          "other": ""
         }
-      }
+      },
+      "ship": {
+        "vehicle": [],
+        "crew": [],
+        "crew role": ""
+      } 
+    },
+    "npc": {
+      "templates": ["base"],
+      "description": "",
+      "threat": "",
+      "special rules": []
     }
   },
   "Item": {
-    "types": ["item", "feature", "spell"],
+    "types": ["item", "vehicle", "focus", "talent", "drive"],
     "templates": {
       "base": {
+        "name": "",
         "description": ""
       }
     },
     "item": {
+      "types": ["weapons", "armor", "gear"],
       "templates": ["base"],
       "quantity": 1,
       "weight": 0
     },
-    "feature": {
+    "vehicle": {
+      "size": {
+        "hull": 1,
+        "crew": {
+          "min": 1,
+          "norm": 2
+        }
+      },
+      "drives":[],
+      "sensors": {
+        "value": 0
+      },
+      "weapons": [],
+      "attributes": {
+        "qualities": [],
+        "flaws": [],
+        "loss conditions": []
+      }
+    },
+    "focus": {
       "templates": ["base"]
     },
-    "spell": {
+    "talent": {
       "templates": ["base"],
-      "spellLevel": 1
+      "requirements": [],
+      "current": "novice",
+      "degrees": {
+        "novice": {
+          "value": ""
+        },
+        "expert": {
+          "value": ""
+        },
+        "master": {
+          "value": ""
+        }
+      }
+    },
+    "drive": {
+      "templates": ["base"],
+      "quality": {
+        "value": "",
+        "description": ""
+      },
+      "downfall": {
+        "value": "",
+        "description": ""
+      },
+      "talents": []
     }
   }
 }
