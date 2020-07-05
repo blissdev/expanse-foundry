@@ -208,6 +208,31 @@ export class BoilerplateActorSheet extends ActorSheet {
         score: dataset.mod
       });
 
+      // perform visual dice rolls
+      if ("dice3d" in game) {
+        await game.dice3d.show({
+          formula: '2d6',
+          results: [combinedResults[0], combinedResults[1]],
+          whisper: null,
+          blind: false
+        });
+
+        await game.user.setFlag("dice-so-nice", "appearance", {
+          colorset: "expanse-drama"
+        });
+
+        await game.dice3d.show({
+          formula: '1d6',
+          results: [combinedResults[2]],
+          whisper: null,
+          blind: false
+        });
+
+        await game.user.setFlag("dice-so-nice", "appearance", {
+          colorset: "custom",
+        });
+      }
+
       ChatMessage.create({
         speaker: ChatMessage.getSpeaker({ actor: this.actor }),
         content: content,

@@ -52,6 +52,18 @@ Hooks.once("ready", async function() {
   Hooks.on("hotbarDrop", (bar, data, slot) => createBoilerplateMacro(data, slot));
 });
 
+Hooks.once("diceSoNiceReady", (dice3d) => {
+  dice3d.addColorset({
+    name: "expanse-drama",
+    description: "",
+    category: "Colors",
+    foreground: "#FFFFFF",
+    background: "#69140E",
+    outline: "none",
+    texture: "none"
+  });
+});
+
 /* -------------------------------------------- */
 /*  Hotbar Macros                               */
 /* -------------------------------------------- */
