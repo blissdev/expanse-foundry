@@ -13,7 +13,7 @@
               <div class="ability flexrow flex-group-center">
                 <label for="data.abilities.{{key}}.value" class="resource-label">{{key}}</label>
                 <input type="text" name="data.abilities.{{key}}.value" value="{{ability.value}}" data-dtype="Number"/>
-                <span class="ability-mod rollable" data-roll="d20+@abilities.{{key}}.value" data-label="{{key}}">{{numberFormat ability.value decimals=0 sign=true}}</span>
+                <span class="ability-mod ability-rollable" data-roll="{2d6, 1d6}" data-label="{{key}}">{{numberFormat ability.value decimals=0 sign=true}}</span>
               </div>
             {{/each}}
           </div>
