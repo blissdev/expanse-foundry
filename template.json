@@ -5,39 +5,39 @@
       "base": {
         "name": "new character",
         "abilities": {
-          "acc": {
+          "accuracy": {
             "value": 0,
             "focuses": []
           },
-          "com": {
+          "communication": {
             "value": 0,
             "focuses": []
           },
-          "con": {
+          "constitution": {
             "value": 0,
             "focuses": []
           },
-          "dex": {
+          "dexterity": {
             "value": 0,
             "focuses": []
           },
-          "fig": {
+          "fighting": {
             "value": 0,
             "focuses": []
           },
-          "int": {
+          "intelligence": {
             "value": 0,
             "focuses": []
           },
-          "per": {
+          "perception": {
             "value": 0,
             "focuses": []
           },
-          "str": {
+          "strength": {
             "value": 0,
             "focuses": []
           },
-          "wil": {
+          "willpower": {
             "value": 0,
             "focuses": []
           }
