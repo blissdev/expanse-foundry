@@ -179,13 +179,13 @@ export class BoilerplateActorSheet extends ActorSheet {
    * @param {Event} event   The originating click event
    * @private
    */
-  _onAbilityRoll(event) {
+  async _onAbilityRoll(event) {
     event.preventDefault();
     const element = event.currentTarget;
     const dataset = element.dataset;
 
     if (dataset.roll) {
-      let roll = new Roll("{2d6, 1d6}", this.actor.data.data);
+      let roll = new Roll(dataset.roll, this.actor.data.data);
       let label = dataset.label ? `Rolling ${dataset.label}` : '';
       let rollResult = roll.roll();
 
@@ -197,16 +197,20 @@ export class BoilerplateActorSheet extends ActorSheet {
       let double = new Set(combinedResults).size < combinedResults.length;
 
       let stunt = double ? dramaResult[0] : 0;
-      
-      console.log({
-        combinedResults,
-        dramaResult,
-        double,
-        stunt,
+
+      let content = await renderTemplate("systems/expanse-foundry/templates/ability-test-roll.html", {
+        d1: combinedResults[0],
+        d2: combinedResults[1],
+        d3: combinedResults[2],
+        hasStunt: double,
+        stunt: stunt,
+        total: total,
+        score: dataset.mod
       });
 
-      rollResult.toMessage({
+      ChatMessage.create({
         speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+        content: content,
         flavor: label
       });
     }

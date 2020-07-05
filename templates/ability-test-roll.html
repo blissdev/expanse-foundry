@@ -1,0 +1,28 @@
+<div class="dice-roll">
+    <div class="dice-result">
+        <div class="dice-tooltip" style="display: block;">
+            <section class="tooltip-part">
+                <div class="dice">
+                    <p class="part-formula">Standard</p>
+                    <ol class="dice-rolls">
+                        <li class="roll die d6">{{d1}}</li>
+                        <li class="roll die d6">{{d2}}</li>
+                    </ol>
+                </div>
+            </section>
+            <section class="tooltip-part">
+                <div class="dice">
+                    <p class="part-formula drama-color">Drama</p>
+                    <ol class="dice-rolls">
+                        <li class="roll die d6">{{d3}}</li>
+                    </ol>
+                </div>
+            </section>
+        </div>
+        <h4 class="dice-total">{{total}}</h4>
+    </div>
+    Ability score: {{score}}
+    {{#if hasStunt}}
+    <div class="dice-flavor">STUNT: {{stunt}}</div>
+    {{/if}}
+</div>
