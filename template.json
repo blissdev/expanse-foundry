@@ -279,17 +279,105 @@
           "perception": {
             "value": 0,
             "description": "Perception is the ability to pick up on and notice things using any of the character’s senses.",
-            "focuses": []
+            "focuses": [
+              { "name":"Empathy", 
+                "description": "Picking up on and interpreting the feelings and emotions of others.",
+                "proficient": false,
+                "advance": false
+              },
+              { "name":"Hearing", 
+                "description": "Perceiving using your auditory sense.",
+                "proficient": false,
+                "advance": false
+              },
+              { "name":"Intuition", 
+                "description": "Having a “gut feeling” about certain things you can’t otherwise sense.",
+                "proficient": false,
+                "advance": false
+              },
+              { "name":"Searching", 
+                "description": "Finding things that are hidden or obscured, such as hidden compartments.",
+                "proficient": false,
+                "advance": false
+              },
+              { "name":"Seeing", 
+                "description": "Perceiving using your visual sense.",
+                "proficient": false,
+                "advance": false
+              },
+              { "name":"Smelling", 
+                "description": "Perceiving using your olfactory sense.",
+                "proficient": false,
+                "advance": false
+              },
+              { "name":"Survival", 
+                "description": "Practical skills of wilderness survival.",
+                "proficient": false,
+                "advance": false
+              },
+              { "name":"Tasting", 
+                "description": "Perceiving using your gustatory sense.",
+                "proficient": false,
+                "advance": false
+              },
+              { "name":"Touching", 
+                "description": "Perceiving using your tactile sense.",
+                "proficient": false,
+                "advance": false
+              },
+              { "name":"Tracking", 
+                "description": "Following tracks and other signs of passage.",
+                "proficient": false,
+                "advance": false
+              }
+            ]
           },
           "strength": {
             "value": 0,
             "description": "Strength is sheer muscle power and the ability to apply it, from lifting heavy things to feats of athletics.",
-            "focuses": []
+            "focuses": [
+              { "name":"Climbing", 
+                "description": "Scaling walls and other vertical obstacles.",
+                "proficient": false,
+                "advance": false
+              },
+              { "name":"Intimidation", 
+                "description": "Overawing others with your physical presence and threats.",
+                "proficient": false,
+                "advance": false
+              },
+              { "name":"Jumping", 
+                "description": "Making standing or running jumps.",
+                "proficient": false,
+                "advance": false
+              },
+              { "name":"Might", 
+                "description": "Feats of raw power, such as lifting or holding up heavy objects.",
+                "proficient": false,
+                "advance": false
+              }
+            ]
           },
           "willpower": {
             "value": 0,
             "description": "Willpower measures self-control, self-discipline, mental fortitude, and confidence.",
-            "focuses": []
+            "focuses": [
+              { "name":"Courage", 
+                "description": "Overcoming fear in the face of adversity.",
+                "proficient": false,
+                "advance": false
+              },
+              { "name":"Faith", 
+                "description": "Deriving inner strength through spiritual or moral belief.",
+                "proficient": false,
+                "advance": false
+              },
+              { "name":"Self-Discipline", 
+                "description": "Focusing your mental energy or controlling your impulses and emotions.",
+                "proficient": false,
+                "advance": false
+              },
+            ]
           }
         },
         "conditions":[],
