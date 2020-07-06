@@ -172,12 +172,109 @@
           "fighting": {
             "value": 0,
             "description": "Fighting is your character’s capability and prowess in close combat, ranging from a brawl to wielding weapons.",
-            "focuses": []
+            "focuses": [
+              { "name":"Brawling", 
+                "description": "Proficiency in fighting unarmed, from bareknuckle boxing to various styles of martial arts.",
+                "proficient": false,
+                "advance": false
+              },
+              { "name":"Grappling", 
+                "description": "Proficiency in unarmed techniques intended to immobilize and restrain.",
+                "proficient": false,
+                "advance": false
+              },
+              { "name":"Heavy Weapons", 
+                "description": "Proficiency with large or heavy close combat weapons like axes, clubs, hammers, and large swords, to name a few.",
+                "proficient": false,
+                "advance": false
+              },
+              { "name":"Light Weapons", 
+                "description": "Proficiency with light close combat weapons like batons, knives, light staffs, and swords, among others.",
+                "proficient": false,
+                "advance": false
+              }
+            ]
           },
           "intelligence": {
             "value": 0,
             "description": "Intelligence measures a character’s reasoning, memory, problem-solving, and overall knowledge.",
-            "focuses": []
+            "focuses": [
+              { "name":"Art", 
+                "description": "Knowledge of artistic movements, styles, artists, and works in any of the fine arts. Making art uses the Crafting focus.",
+                "proficient": false,
+                "advance": false
+              },
+              { "name":"Business", 
+                "description": "Knowledge of running a business as well as of the business and corporate world.",
+                "proficient": false,
+                "advance": false
+              },
+              { "name":"Cryptography", 
+                "description": "Creating and deciphering codes and ciphers.",
+                "proficient": false,
+                "advance": false
+              },
+              { "name":"Current Affairs", 
+                "description": "Knowledge of politics, newsworthy events, and popular culture.",
+                "proficient": false,
+                "advance": false
+              },
+              { "name":"Demolitions", 
+                "description": "Identifying, using, and safely handling explosives, as well as understanding their effects and detonation methods.",
+                "proficient": false,
+                "advance": false
+              },
+              { "name":"Engineering", 
+                "description": "Making, repairing, and maintaining technological items as well as knowledge of the principles and practicalities of their design and development.",
+                "proficient": false,
+                "advance": false
+              },
+              { "name":"Evaluation", 
+                "description": "Knowledge of the value of goods, works of art, and other valuables.",
+                "proficient": false,
+                "advance": false
+              },
+              { "name":"Law", 
+                "description": "Knowledge of codes, regulations, and different legal proceedings of all levels of the judiciary and law enforcement.",
+                "proficient": false,
+                "advance": false
+              },
+              { "name":"Medicine", 
+                "description": "Tending to the sick and injured, and understanding medical and anatomical knowledge.",
+                "proficient": false,
+                "advance": false
+              },
+              { "name":"Navigation", 
+                "description": "Planning and following a route from one place to another, interpreting maps and cartographic data, and figuring out where you are.",
+                "proficient": false,
+                "advance": false
+              },
+              { "name":"Research", 
+                "description": "Conducting a systematic search for information, usually using records, archives, and books.",
+                "proficient": false,
+                "advance": false
+              },
+              { "name":"Science", 
+                "description": "Knowledge of an organized field of study and the ability to understand things related to it. Examples of Science focuses include Anthropology, Astronomy, Botany, Biology, Chemistry, Economics, Genetics, History, Planetary or “Earth” Sciences, Physics, Psychology, and Theology, but you can choose another scientific field, if you wish (see the Unusual Focuses sidebar).",
+                "proficient": false,
+                "advance": false
+              },
+              { "name":"Security", 
+                "description": "Knowledge of different security devices, systems, protocols, and personnel.",
+                "proficient": false,
+                "advance": false
+              },
+              { "name":"Tactics", 
+                "description": "Knowledge of strategy, tactics, and famous applications thereof.",
+                "proficient": false,
+                "advance": false
+              },
+              { "name":"Technology", 
+                "description": "Knowledge of the design and operation of technology, particularly computers, which are incorporated into nearly all technological items in The Expanse.",
+                "proficient": false,
+                "advance": false
+              }
+            ]
           },
           "perception": {
             "value": 0,
