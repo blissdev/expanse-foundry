@@ -100,12 +100,74 @@
           "constitution": {
             "value": 0,
             "description": "Constitution is your character’s overall health, fortitude, and resistance to harm, illness, and fatigue.",
-            "focuses": []
+            "focuses": [
+              { "name":"Running", 
+                "description": "Moving quickly in both short sprints and longdistance hauls.",
+                "proficient": false,
+                "advance": false
+              },
+              { "name":"Stamina", 
+                "description": "Enduring fatigue, disease, and privation.",
+                "proficient": false,
+                "advance": false
+              },
+              { "name":"Swimming", 
+                "description": "Moving across water and staying afloat.",
+                "proficient": false,
+                "advance": false
+              },
+              { "name":"Tolerance", 
+                "description": "Withstanding the effects of potentially toxic substances, imbibed for recreation or unwitting exposure.",
+                "proficient": false,
+                "advance": false
+              }
+            ]
           },
           "dexterity": {
             "value": 0,
             "description": "Dexterity covers deftness, agility, and reaction time, affecting how quickly and gracefully you move.",
-            "focuses": []
+            "focuses": [
+              { "name":"Acrobatics", 
+                "description": "Executing gymnastic, balancing, and tumbling maneuvers.",
+                "proficient": false,
+                "advance": false
+              },
+              { "name":"Crafting", 
+                "description": "Making things with manual skills, including the various fine and plastic arts. Examples of specific Crafting focuses include Carpentry, Carving, Drawing, Glass-blowing, Leather-working, Painting, Origami, Sculpting, and so forth, but feel free to come up with your own. See the Unusual Focuses sidebar for more.",
+                "proficient": false,
+                "advance": false
+              },
+              { "name":"Driving", 
+                "description": "Handling surface vehicles like cars, trucks, or motorized carts, to name a few.",
+                "proficient": false,
+                "advance": false
+              },
+              { "name":"Free-Fall", 
+                "description": "Maneuvering and moving while in free-fall, usually in microgravity.",
+                "proficient": false,
+                "advance": false
+              },
+              { "name":"Initiative", 
+                "description": "Reacting quickly under pressure.",
+                "proficient": false,
+                "advance": false
+              },
+              { "name":"Piloting", 
+                "description": "Operating vehicles that move in three dimensions like aircraft, drones, and spaceships.",
+                "proficient": false,
+                "advance": false
+              },
+              { "name":"Sleight of Hand", 
+                "description": "Using sleight of hand and deft movements to trick others, hide things, or pick pockets.",
+                "proficient": false,
+                "advance": false
+              },
+              { "name":"Stealth", 
+                "description": "Moving around without being noticed.",
+                "proficient": false,
+                "advance": false
+              }
+            ]
           },
           "fighting": {
             "value": 0,
