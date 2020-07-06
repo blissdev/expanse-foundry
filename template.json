@@ -18,7 +18,7 @@
                 "description": "Proficiency with precision heavy ranged weapons, including ship-mounted weapons.",
                 "proficient": false,
                 "advance": false
-              },
+              }
             ]
           },
           "communication": {
