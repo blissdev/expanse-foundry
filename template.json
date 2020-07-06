@@ -7,7 +7,19 @@
         "abilities": {
           "accuracy": {
             "value": 0,
-            "focuses": []
+            "description": "Accuracy measures aim and precision, and measures your ability to hit targets with ranged or thrown weapons.",
+            "focuses": [
+              { "name":"Bows", 
+                "description": "Proficiency with string-fired weapons, from a handdrawn compound bow to a mechanical crossbow.",
+                "proficient": false,
+                "advance": false
+              },
+              { "name":"Gunnery", 
+                "description": "Proficiency with precision heavy ranged weapons, including ship-mounted weapons.",
+                "proficient": false,
+                "advance": false
+              },
+            ]
           },
           "communication": {
             "value": 0,
