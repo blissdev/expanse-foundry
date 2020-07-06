@@ -39,7 +39,63 @@
           "communication": {
             "value": 0,
             "description": "Communication covers social skills and generally making friends and influencing people.",
-            "focuses": []
+            "focuses": [
+                { "name":"Bargaining", 
+                "description": "Negotiating with others and making deals.",
+                "proficient": false,
+                "advance": false
+              },
+                { "name":"Deception", 
+                "description": "Tricking and lying to other people.",
+                "proficient": false,
+                "advance": false
+              },
+                { "name":"Disguise", 
+                "description": "Changing your appearance to look like someone else.",
+                "proficient": false,
+                "advance": false
+              },
+                { "name":"Etiquette", 
+                "description": "Knowing the social niceties of various cultures.",
+                "proficient": false,
+                "advance": false
+              },
+                { "name":"Expression", 
+                "description": "Conveying thoughts and ideas effectively through words.",
+                "proficient": false,
+                "advance": false
+              },
+                { "name":"Gambling", 
+                "description": "Playing games of chance and profiting from them.",
+                "proficient": false,
+                "advance": false
+              },
+                { "name":"Investigation", 
+                "description": "Interviewing people for information and finding and deciphering clues.",
+                "proficient": false,
+                "advance": false
+              },
+                { "name":"Leadership", 
+                "description": "Guiding, directing, and inspiring others.",
+                "proficient": false,
+                "advance": false
+              },
+                { "name":"Performing", 
+                "description": "Entertaining an audience with a type of performance art.",
+                "proficient": false,
+                "advance": false
+              },
+                { "name":"Persuasion", 
+                "description": "Convincing others to agree with you.",
+                "proficient": false,
+                "advance": false
+              },
+                { "name":"Seduction", 
+                "description": "Getting attention through romantic and sexual allure.",
+                "proficient": false,
+                "advance": false
+              }
+            ]
           },
           "constitution": {
             "value": 0,
