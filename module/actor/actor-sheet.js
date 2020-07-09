@@ -1,3 +1,5 @@
+import SelectedFocusDialog from "../components/selected-focus-dialog.js";
+
 /**
  * Extend the basic ActorSheet with some very simple modifications
  * @extends {ActorSheet}
@@ -84,6 +86,8 @@ export class BoilerplateActorSheet extends ActorSheet {
     actorData.gear = gear;
     actorData.features = features;
     actorData.spells = spells;
+    actorData.activeFocuses = sheetData.data.activeFocuses;
+    actorData.abilitySet = sheetData.data.abilities;
   }
 
   /* -------------------------------------------- */
@@ -115,6 +119,8 @@ export class BoilerplateActorSheet extends ActorSheet {
     // Rollable abilities.
     html.find('.rollable').click(this._onRoll.bind(this));
     html.find('.ability-rollable').click(this._onAbilityRoll.bind(this));
+
+    html.find('.ability-focus-trigger').click(this._onFocusEditor.bind(this));
 
     // Drag events for macros.
     if (this.actor.owner) {
@@ -241,4 +247,10 @@ export class BoilerplateActorSheet extends ActorSheet {
     }
   }
 
+  async _onFocusEditor(event) {
+    const selectedFocusDialog = await SelectedFocusDialog.create(
+      this.actor,
+      event.currentTarget.dataset
+    );
+  }
 }

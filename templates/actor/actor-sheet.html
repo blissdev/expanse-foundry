@@ -10,10 +10,11 @@
           from 1 to 12 and will create that number of columns.  --}}
           <div class="abilities grid grid-3col">
             {{#each data.abilities as |ability key|}}
-              <div class="ability flexrow flex-group-center">
+              <div class="ability">
                 <label for="data.abilities.{{key}}.value" class="resource-label">{{key}}</label>
                 <input type="text" name="data.abilities.{{key}}.value" value="{{ability.value}}" data-dtype="Number"/>
                 <span class="ability-mod ability-rollable" data-roll="{2d6, 1d6}+@abilities.{{key}}.value" data-label="{{key}}" data-mod="{{ability.value}}">{{numberFormat ability.value decimals=0 sign=true}}</span>
+                <button class="ability-focus-trigger" data-label="{{key}}">F</button>
               </div>
             {{/each}}
           </div>
