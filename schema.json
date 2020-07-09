@@ -1,0 +1,86 @@
+{
+	"talent": {
+		"name": "",
+		"acquired": false,
+		"description": "",
+    	"requirements": [],
+    	"current": "novice",
+    	"degrees": {
+        	"novice": {
+        		"description": ""
+        	},
+        	"expert": {
+          		"description": ""
+        	},
+        	"master": {
+          		"description": ""
+          	}
+        }
+    },
+    "specialization": {
+    	"name": "",
+    	"acquired": false,
+    	"description": "",
+    	"synergies": "",
+    	"requirements": [],
+    	"current": "novice",
+    	"degrees": {
+        	"novice": {
+        		"description": ""
+        	},
+        	"expert": {
+          		"description": ""
+        	},
+        	"master": {
+          		"description": ""
+          	}
+        }
+    },
+    "drive": {
+    	"name": "",
+    	"acquired": false,
+    	"description": "",
+    	"quality": "",
+    	"downfall": "",
+    	"talent": []
+    },
+    "weapon": {
+    	"name": "",
+    	"acquired": false,
+    	"type": "",
+    	"damage": "",
+    	"cost": 0,
+    	"qualities": []
+    },
+    "armor": {
+    	"name": "",
+    	"acquired": false,
+    	"type": "",
+    	"armor bonus": 0,
+    	"armor penalty": 0,
+    	"defense bonus": 0,
+    	"cost": 0,
+    	"qualities": []
+    },
+    "ship": {
+    	"name": "",
+    	"acquired": false,
+    	"type": "",
+    	"size-category": "",
+    	"length": 5,
+    	"hull": 1,
+    	"crew-min": 1,
+    	"crew-standard": 2,
+    	"crew-competance": [],
+    	"drives": [],
+    	"sensors": 0,
+    	"weapons": [],
+    	"qualities": [],
+    	"flaws": [],
+    	"condition": "nominal",
+    	"loss-conditions": {
+    		"normal": [],
+    		"serious": []
+    	}
+	}
+}
