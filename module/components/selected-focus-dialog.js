@@ -2,8 +2,20 @@ export default class SelectedFocusDialog extends Dialog {
   constructor(actor, item, dialogData={}, options={}) {
     super(dialogData, options);
     this.options.classes = ["dialog"];
+    this.actor = actor;
+    this.item = item;
   }
 
+  /** @override */
+  activateListeners(html) {
+    super.activateListeners(html);
+
+    html.find('.focus-selector-option').change(ev => {
+      console.log(ev);
+      console.log(this.actor);
+    });
+
+  }
   /* -------------------------------------------- */
   /*  Rendering                                   */
   /* -------------------------------------------- */
