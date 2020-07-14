@@ -45,6 +45,10 @@ Hooks.once('init', async function() {
   Handlebars.registerHelper('toLowerCase', function(str) {
     return str.toLowerCase();
   });
+
+  Handlebars.registerHelper('cap', function(str) {
+    return `${str[0].toUpperCase()}${str.slice(1)}`;
+  });
 });
 
 Hooks.once("ready", async function() {

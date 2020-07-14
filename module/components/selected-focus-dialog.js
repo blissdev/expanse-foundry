@@ -16,31 +16,20 @@ export default class SelectedFocusDialog extends Dialog {
    * @return {Promise}
    */
   static async create(actor, selectedAbility) {
-
-    // Render the Spell casting template
-    /*
-    const html = await renderTemplate("systems/dnd5e/templates/apps/spell-cast.html", {
-      item: item.data,
-      canCast: canCast,
-      canUpcast: canUpcast,
-      spellLevels,
-      hasPlaceableTemplate: game.user.can("TEMPLATE_CREATE") && item.hasAreaTarget
+    const html = await renderTemplate("systems/expanse-foundry/templates/focus-selection.html", {
+      actor: actor,
+      ability: actor.data.data.abilities[selectedAbility.label],
+      selectedAbility: selectedAbility
     });
-    */
+
 
     console.log(actor);
     // Create the Dialog and return as a Promise
     return new Promise((resolve, reject) => {
       const dlg = new this(actor, selectedAbility, {
         title: `${selectedAbility.label.replace(/^\w/, c => c.toUpperCase())} Focuses`,
-        content: "<h1>SUP BISH</h1>",
-        buttons: {
-          cast: {
-            icon: '<i class="fas fa-magic"></i>',
-            label: "Cast",
-            callback: html => resolve(new FormData(html[0].querySelector("#spell-config-form")))
-          }
-        },
+        content: html,
+        buttons: { },
         default: "cast",
         close: reject
       });

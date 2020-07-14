@@ -1,0 +1,27 @@
+<form id="focus-selection" class="dialog-content" onsubmit="event.preventDefault()">
+    <header>
+        <h1>{{cap selectedAbility.label}}</h1>
+    </header>
+
+    <p>{{ability.description}}</p>
+
+    <ul>
+        {{#each ability.focuses}}
+        <li>
+            <div class="focus-select">
+                <input
+                    name="{{../selectedAbility.label}}{{@index}}"
+                    id="{{../selectedAbility.label}}{{@index}}"
+                    type="checkbox" {{#if this.proficient}}checked{{/if}}
+                />
+                <label for="{{../selectedAbility.label}}{{@index}}">
+                    <dl>
+                        <dt>{{this.name}}</dt>
+                        <dd>{{this.description}}</dd>
+                    </dl>
+                </label>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+</form>
