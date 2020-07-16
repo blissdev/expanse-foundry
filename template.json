@@ -4,6 +4,7 @@
     "templates": {
       "base": {
         "name": "new character",
+        "proficientFocuses": [],
         "abilities": {
           "accuracy": {
             "value": 0,

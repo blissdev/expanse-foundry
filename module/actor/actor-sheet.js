@@ -82,12 +82,32 @@ export class BoilerplateActorSheet extends ActorSheet {
       }
     }
 
+    const focusByAbility = {};
+
+    for (let a of Object.keys(sheetData.data.abilities)) {
+      if(a ==="accuracy") {
+        console.log(sheetData.data.abilities[a]);
+      }
+      focusByAbility[a] = [];
+    }
+
+    for (let f of sheetData.data.proficientFocuses) {
+      const parts = f.split("+");
+      if(focusByAbility[parts[0]].length === 0) {
+        focusByAbility[parts[0]] = [parts[1]];
+      } else {
+        focusByAbility[parts[0]] = focusByAbility[parts[0]].push(parts[1]);
+      }
+    }
+
+    console.log(focusByAbility);
+
     // Assign and return
     actorData.gear = gear;
     actorData.features = features;
     actorData.spells = spells;
-    actorData.activeFocuses = sheetData.data.activeFocuses;
     actorData.abilitySet = sheetData.data.abilities;
+    actorData.focusByAbility = focusByAbility;
   }
 
   /* -------------------------------------------- */
@@ -211,7 +231,8 @@ export class BoilerplateActorSheet extends ActorSheet {
         hasStunt: double,
         stunt: stunt,
         total: total,
-        score: dataset.mod
+        score: dataset.mod,
+        proficiency: dataset.proficiency
       });
 
       // perform visual dice rolls

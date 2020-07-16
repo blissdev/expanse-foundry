@@ -24,21 +24,5 @@ export class BoilerplateActor extends Actor {
    */
   _prepareCharacterData(actorData) {
     const data = actorData.data;
-
-    const activeFocuses = {};
-
-    for (let a in data.abilities) {
-      for (let f of data.abilities[a].focuses) {
-        if (f.proficient) {
-          if (!(a in activeFocuses)) {
-            activeFocuses[a] = [f];
-          } else {
-            activeFocuses[a].push(f);
-          }
-        }
-      }
-    }
-
-    data.activeFocuses = activeFocuses;
   }
 }

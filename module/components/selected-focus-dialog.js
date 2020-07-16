@@ -6,13 +6,30 @@ export default class SelectedFocusDialog extends Dialog {
     this.item = item;
   }
 
+  slugify(abilityName, focusName) {
+    return `${abilityName}+${focusName}`;
+  }
+
   /** @override */
   activateListeners(html) {
     super.activateListeners(html);
 
     html.find('.focus-selector-option').change(ev => {
-      console.log(ev);
-      console.log(this.actor);
+      const ability = this.actor.data.data.abilities[this.item.label];
+      const focus = ability.focuses[ev.currentTarget.value]
+      const slug = this.slugify(this.item.label, focus.name);
+
+      let currentProficiencies = [...this.actor.data.data.proficientFocuses];
+
+      if (ev.currentTarget.checked) {
+        currentProficiencies.push(slug);
+      } else {
+        currentProficiencies = currentProficiencies.filter(p => p !== slug);
+      }
+
+      this.actor.update({
+        data: { proficientFocuses: currentProficiencies }
+      });
     });
 
   }
@@ -42,7 +59,7 @@ export default class SelectedFocusDialog extends Dialog {
         title: `${selectedAbility.label.replace(/^\w/, c => c.toUpperCase())} Focuses`,
         content: html,
         buttons: { },
-        default: "cast",
+        default: null,
         close: reject
       });
       dlg.render(true);
