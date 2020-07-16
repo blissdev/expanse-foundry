@@ -23,12 +23,12 @@ export class BoilerplateActorSheet extends ActorSheet {
   getData() {
     const data = super.getData();
     data.dtypes = ["String", "Number", "Boolean"];
-    for (let attr of Object.values(data.data.attributes)) {
-      attr.isCheckbox = attr.dtype === "Boolean";
-    }
 
     // Prepare items.
     if (this.actor.data.type == 'character') {
+      for (let attr of Object.values(data.data.attributes)) {
+        attr.isCheckbox = attr.dtype === "Boolean";
+      }
       this._prepareCharacterItems(data);
     }
 
