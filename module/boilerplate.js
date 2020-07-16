@@ -49,6 +49,15 @@ Hooks.once('init', async function() {
   Handlebars.registerHelper('cap', function(str) {
     return `${str[0].toUpperCase()}${str.slice(1)}`;
   });
+
+  Handlebars.registerHelper('focusSlug', function(ability, focus) {
+    return `${ability}+${focus}`;
+
+  });
+
+  Handlebars.registerHelper('in', function(collection, key) {
+    return collection.includes(key);
+  });
 });
 
 Hooks.once("ready", async function() {

@@ -85,9 +85,6 @@ export class BoilerplateActorSheet extends ActorSheet {
     const focusByAbility = {};
 
     for (let a of Object.keys(sheetData.data.abilities)) {
-      if(a ==="accuracy") {
-        console.log(sheetData.data.abilities[a]);
-      }
       focusByAbility[a] = [];
     }
 
@@ -99,8 +96,6 @@ export class BoilerplateActorSheet extends ActorSheet {
         focusByAbility[parts[0]] = focusByAbility[parts[0]].push(parts[1]);
       }
     }
-
-    console.log(focusByAbility);
 
     // Assign and return
     actorData.gear = gear;

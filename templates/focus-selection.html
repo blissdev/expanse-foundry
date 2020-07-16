@@ -13,7 +13,8 @@
                     class="focus-selector-option"
                     name="{{../selectedAbility.label}}{{@index}}"
                     id="{{../selectedAbility.label}}{{@index}}"
-                    type="checkbox" {{#if this.proficient}}checked{{/if}}
+                    data-key="{{../selectedAbility.label}}+{{this.name}}"
+                    type="checkbox" {{#if (in ../proficientFocuses (focusSlug ../selectedAbility.label this.name))}}checked{{/if}}
                     value="{{@index}}"
                 />
                 <label for="{{../selectedAbility.label}}{{@index}}">

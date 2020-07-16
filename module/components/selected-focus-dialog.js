@@ -48,11 +48,10 @@ export default class SelectedFocusDialog extends Dialog {
     const html = await renderTemplate("systems/expanse-foundry/templates/focus-selection.html", {
       actor: actor,
       ability: actor.data.data.abilities[selectedAbility.label],
-      selectedAbility: selectedAbility
+      selectedAbility: selectedAbility,
+      proficientFocuses: actor.data.data.proficientFocuses
     });
 
-
-    console.log(actor);
     // Create the Dialog and return as a Promise
     return new Promise((resolve, reject) => {
       const dlg = new this(actor, selectedAbility, {
