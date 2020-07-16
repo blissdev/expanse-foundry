@@ -90,11 +90,7 @@ export class BoilerplateActorSheet extends ActorSheet {
 
     for (let f of sheetData.data.proficientFocuses) {
       const parts = f.split("+");
-      if(focusByAbility[parts[0]].length === 0) {
-        focusByAbility[parts[0]] = [parts[1]];
-      } else {
-        focusByAbility[parts[0]] = focusByAbility[parts[0]].push(parts[1]);
-      }
+      focusByAbility[parts[0]].push(parts[1]);
     }
 
     // Assign and return
