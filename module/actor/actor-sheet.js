@@ -24,6 +24,8 @@ export class BoilerplateActorSheet extends ActorSheet {
     const data = super.getData();
     data.dtypes = ["String", "Number", "Boolean"];
 
+    this._prepareActorData(data);
+
     // Prepare items.
     if (this.actor.data.type == 'character') {
       for (let attr of Object.values(data.data.attributes)) {
@@ -33,6 +35,22 @@ export class BoilerplateActorSheet extends ActorSheet {
     }
 
     return data;
+  }
+
+  _prepareActorData(sheetData) {
+    const actorData = sheetData.actor;
+    const focusByAbility = {};
+
+    for (let a of Object.keys(sheetData.data.abilities)) {
+      focusByAbility[a] = [];
+    }
+
+    for (let f of sheetData.data.proficientFocuses) {
+      const parts = f.split("+");
+      focusByAbility[parts[0]].push(parts[1]);
+    }
+
+    actorData.focusByAbility = focusByAbility;
   }
 
   /**
@@ -82,23 +100,12 @@ export class BoilerplateActorSheet extends ActorSheet {
       }
     }
 
-    const focusByAbility = {};
-
-    for (let a of Object.keys(sheetData.data.abilities)) {
-      focusByAbility[a] = [];
-    }
-
-    for (let f of sheetData.data.proficientFocuses) {
-      const parts = f.split("+");
-      focusByAbility[parts[0]].push(parts[1]);
-    }
 
     // Assign and return
     actorData.gear = gear;
     actorData.features = features;
     actorData.spells = spells;
     actorData.abilitySet = sheetData.data.abilities;
-    actorData.focusByAbility = focusByAbility;
   }
 
   /* -------------------------------------------- */
