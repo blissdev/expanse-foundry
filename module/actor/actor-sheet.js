@@ -4,7 +4,7 @@ import SelectedFocusDialog from "../components/selected-focus-dialog.js";
  * Extend the basic ActorSheet with some very simple modifications
  * @extends {ActorSheet}
  */
-export class BoilerplateActorSheet extends ActorSheet {
+export class ExpanseActorSheet extends ActorSheet {
 
   /** @override */
   static get defaultOptions() {
