@@ -1,7 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Martel:wght@400;800&family=Roboto:wght@300;400;500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
 /* Global styles */
 .window-app {
-  font-family: "Roboto", sans-serif;
+  font-family: "Exo 2", sans-serif;
+}
+.window-app .window-content {
+  background: #fff;
 }
 
 .rollable:hover, .rollable:focus {
@@ -116,7 +120,7 @@
 
 /* Styles limited to boilerplate sheets */
 .boilerplate .item-form {
-  font-family: "Roboto", sans-serif;
+  font-family: "Exo 2", sans-serif;
 }
 
 .boilerplate .sheet-header {
@@ -187,7 +191,7 @@
 }
 
 .boilerplate .resource-label {
-  font-weight: bold;
+  font-family: "Oswald", sans-serif;
   text-transform: uppercase;
 }
 
@@ -245,4 +249,11 @@
   -ms-flex: 0 0 86px;
   flex: 0 0 86px;
   text-align: right;
+}
+/*Styling for abilities*/
+.ability {}
+
+.ability input[type="text"] {
+    width: 2ch;
+    text-align: center;
 }
