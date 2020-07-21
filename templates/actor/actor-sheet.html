@@ -11,12 +11,13 @@
           <div class="abilities grid grid-3col">
             {{#each data.abilities as |ability key|}}
               <div class="ability">
-                <label for="data.abilities.{{key}}.value" class="resource-label">{{key}}</label>
+                <button class="ability-focus-trigger" data-label="{{key}}">
+                    <span class="resource-label">{{key}}</span>
+                </button>
                 <input type="text" name="data.abilities.{{key}}.value" value="{{ability.value}}" data-dtype="Number"/>
-                <span class="ability-mod ability-rollable" data-roll="{2d6, 1d6}+@abilities.{{key}}.value" data-label="{{key}}" data-mod="{{ability.value}}">{{numberFormat ability.value decimals=0 sign=true}}</span>
-                <button class="ability-focus-trigger" data-label="{{key}}">F</button>
+                <span class="ability-mod ability-rollable" data-roll="{2d6, 1d6}+@abilities.{{key}}.value" data-label="{{key}}" data-mod="{{ability.value}}"><i class="fas fa-dice-d6"></i></span>
                 {{#each (lookup ../entity.focusByAbility [key])}}
-                    <span class="ability-mod ability-rollable" data-roll="{2d6, 1d6}+@abilities.{{key}}.value+2" data-label="{{key}}" data-proficiency={{this}} data-mod="{{ability.value}}">{{this}}</span>
+                    <span class="ability-mod ability-focus" data-roll="{2d6, 1d6}+@abilities.{{key}}.value+2" data-label="{{key}}" data-proficiency={{this}} data-mod="{{ability.value}}">{{this}}</span>
                 {{/each}}
               </div>
             {{/each}}
