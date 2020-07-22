@@ -7,6 +7,7 @@
         "proficientFocuses": [],
         "abilities": {
           "accuracy": {
+            "short": "acc",
             "value": 0,
             "description": "Accuracy measures aim and precision, and measures your ability to hit targets with ranged or thrown weapons.",
             "focuses": [
@@ -38,6 +39,7 @@
             ]
           },
           "communication": {
+            "short": "com",
             "value": 0,
             "description": "Communication covers social skills and generally making friends and influencing people.",
             "focuses": [
@@ -99,6 +101,7 @@
             ]
           },
           "constitution": {
+            "short": "con",
             "value": 0,
             "description": "Constitution is your character’s overall health, fortitude, and resistance to harm, illness, and fatigue.",
             "focuses": [
@@ -125,6 +128,7 @@
             ]
           },
           "dexterity": {
+            "short": "dex",
             "value": 0,
             "description": "Dexterity covers deftness, agility, and reaction time, affecting how quickly and gracefully you move.",
             "focuses": [
@@ -171,6 +175,7 @@
             ]
           },
           "fighting": {
+            "short": "fht",
             "value": 0,
             "description": "Fighting is your character’s capability and prowess in close combat, ranging from a brawl to wielding weapons.",
             "focuses": [
@@ -197,6 +202,7 @@
             ]
           },
           "intelligence": {
+            "short": "int",
             "value": 0,
             "description": "Intelligence measures a character’s reasoning, memory, problem-solving, and overall knowledge.",
             "focuses": [
@@ -278,6 +284,7 @@
             ]
           },
           "perception": {
+            "short": "per",
             "value": 0,
             "description": "Perception is the ability to pick up on and notice things using any of the character’s senses.",
             "focuses": [
@@ -334,6 +341,7 @@
             ]
           },
           "strength": {
+            "short": "str",
             "value": 0,
             "description": "Strength is sheer muscle power and the ability to apply it, from lifting heavy things to feats of athletics.",
             "focuses": [
@@ -360,6 +368,7 @@
             ]
           },
           "willpower": {
+            "short": "wil",
             "value": 0,
             "description": "Willpower measures self-control, self-discipline, mental fortitude, and confidence.",
             "focuses": [
