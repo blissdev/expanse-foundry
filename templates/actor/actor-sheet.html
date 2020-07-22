@@ -14,8 +14,10 @@
                 <div class="ability-score-box">
                     <input type="text" name="data.abilities.{{key}}.value" value="{{ability.value}}" data-dtype="Number"/><br>
                     <button class="ability-focus-trigger" data-label="{{key}}">
-                        <span class="resource-label">{{key}}</span>
-                    </button>
+                        <span class="resource-label">
+                            {{ability.abbreviation}}
+                        </span>
+                    </button><br>
                     <span class="ability-mod ability-rollable" data-roll="{2d6, 1d6}+@abilities.{{key}}.value" data-label="{{key}}" data-mod="{{ability.value}}">
                         <i class="fas fa-dice-d6"></i>
                     </span>
