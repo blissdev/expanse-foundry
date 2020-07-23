@@ -50,8 +50,9 @@ export class ExpanseActorSheet extends ActorSheet {
       focusByAbility[parts[0]].push(parts[1]);
     }
 
+    actorData.editingString = actorData.data.editing ? "editing" : "not-editing";
+
     // Prepare calculated values
-    console.log(actorData.data.abilities);
     actorData.data.speed = actorData.data.abilities.dexterity.value + 10;
     actorData.data.defense = actorData.data.abilities.dexterity.value + 10;
     actorData.data.toughness = actorData.data.abilities.constitution.value;
@@ -139,6 +140,8 @@ export class ExpanseActorSheet extends ActorSheet {
       li.slideUp(200, () => this.render(false));
     });
 
+    html.find('.editmode-toggle').click(this._onEditToggle.bind(this));
+
     // Rollable abilities.
     html.find('.rollable').click(this._onRoll.bind(this));
     html.find('.ability-rollable').click(this._onAbilityRoll.bind(this));
@@ -154,6 +157,13 @@ export class ExpanseActorSheet extends ActorSheet {
         li.addEventListener("dragstart", handler, false);
       });
     }
+  }
+
+  _onEditToggle(event) {
+    event.preventDefault();
+    this.actor.update({
+      data: { editing: !this.actor.data.data.editing }
+    });
   }
 
   /**

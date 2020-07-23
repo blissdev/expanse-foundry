@@ -30,6 +30,13 @@ select option {
     object-fit: cover;
 }
 
+.edit-control {
+    display: none;
+}
+.editing .edit-control {
+    display: block;
+}
+
 .window-content button {
     width: auto;
     font-family: "Exo 2", sans-serif;

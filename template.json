@@ -3,6 +3,7 @@
     "types": ["character", "npc"],
     "templates": {
       "base": {
+        "editing": false,
         "proficientFocuses": [],
         "abilities": {
           "accuracy": {
