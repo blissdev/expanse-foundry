@@ -1,347 +1,107 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
-/* Global styles */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@200;400;600;700&display=swap');
+
 body {
-  font-family: "Exo 2", sans-serif;
+    font-family: "Exo 2", sans-serif;
+    font-weight: 700;
 }
 
-.scene h3 {
-  font-family: "Oswald", sans-serif;
-  font-variant: small-caps;
+.window-content button {
+    width: auto;
+    font-family: "Exo 2", sans-serif;
+    font-weight: 700;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
 }
 
-.window-app {
-  font-family: "Exo 2", sans-serif;
-}
 .window-app .window-content {
-  background: #fff;
+    padding: 22px 32px;
+    background: linear-gradient(130.41deg, #040B35 0.25%, #020F26 100.2%), #C4C4C4;
+    color: #fff;
 }
 
-.rollable:hover, .rollable:focus {
-  color: #000;
-  text-shadow: 0 0 10px red;
-  cursor: pointer;
+.actor-sheet {
+    display: grid;
+    grid-template: 65px 1fr / 138px 1fr;
+    column-gap: 33px;
+    grid-row-gap: 20px;
 }
 
-.grid,
-.grid-2col {
-  display: grid;
-  grid-column: span 2 / span 2;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
-  margin: 10px 0;
-  padding: 0;
-}
-
-.grid-3col {
-  grid-column: span 3 / span 3;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.grid-4col {
-  grid-column: span 4 / span 4;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
-.grid-5col {
-  grid-column: span 5 / span 5;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-}
-
-.grid-6col {
-  grid-column: span 5 / span 5;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-}
-
-.grid-7col {
-  grid-column: span 7 / span 7;
-  grid-template-columns: repeat(7, minmax(0, 1fr));
-}
-
-.grid-8col {
-  grid-column: span 8 / span 8;
-  grid-template-columns: repeat(8, minmax(0, 1fr));
-}
-
-.grid-9col {
-  grid-column: span 9 / span 9;
-  grid-template-columns: repeat(9, minmax(0, 1fr));
-}
-
-.grid-10col {
-  grid-column: span 10 / span 10;
-  grid-template-columns: repeat(10, minmax(0, 1fr));
-}
-
-.grid-11col {
-  grid-column: span 11 / span 11;
-  grid-template-columns: repeat(11, minmax(0, 1fr));
-}
-
-.grid-12col {
-  grid-column: span 12 / span 12;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-}
-
-.flex-group-center,
-.flex-group-left,
-.flex-group-right {
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  text-align: center;
-  padding: 5px;
-  border: 1px solid #999;
-}
-
-.flex-group-left {
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  text-align: left;
-}
-
-.flex-group-right {
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  text-align: right;
-}
-
-.flex-center {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.flex-between {
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-/* Styles limited to boilerplate sheets */
-.boilerplate .item-form {
-  font-family: "Exo 2", sans-serif;
-}
-
-.boilerplate .sheet-header {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 450px;
-  flex: 0 0 450px;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-bottom: 10px;
-}
-
-.boilerplate .sheet-header .profile-img {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 100px;
-  flex: 0 0 100px;
-  height: 100px;
-  margin-right: 10px;
-}
-
-.boilerplate .sheet-header .header-fields {
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.boilerplate .sheet-header h1.charname {
-  height: 50px;
-  padding: 0px;
-  margin: 5px 0;
-  border-bottom: 0;
-}
-
-.boilerplate .sheet-header h1.charname input {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-}
-
-.boilerplate .sheet-tabs {
-  -webkit-box-flex: 0;
-  -ms-flex: 0;
-  flex: 0;
-}
-
-.boilerplate .sheet-body,
-.boilerplate .sheet-body .tab,
-.boilerplate .sheet-body .tab .editor {
-  height: 100%;
-}
-
-.boilerplate .tox .tox-editor-container {
-  background: #fff;
-}
-
-.boilerplate .tox .tox-edit-area {
-  padding: 0 8px;
-}
-
-.boilerplate .resource-label {
-  font-family: "Oswald", sans-serif;
-  text-transform: uppercase;
-  font-size: 8pt;
-  font-weight: 800;
-}
-
-.boilerplate .tabs {
-  height: 40px;
-  border-top: 1px solid #AAA;
-  border-bottom: 1px solid #AAA;
-}
-
-.boilerplate .tabs .item {
-  line-height: 40px;
-  font-weight: bold;
-}
-
-.boilerplate .tabs .item.active {
-  text-decoration: underline;
-  text-shadow: none;
-}
-
-.boilerplate .items-list {
-  list-style: none;
-  margin: 7px 0;
-  padding: 0;
-  overflow-y: auto;
-}
-
-.boilerplate .items-list .item-header {
-  font-weight: bold;
-}
-
-.boilerplate .items-list .item {
-  height: 30px;
-  line-height: 24px;
-  padding: 3px 0;
-  border-bottom: 1px solid #BBB;
-}
-
-.boilerplate .items-list .item .item-image {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 24px;
-  flex: 0 0 24px;
-  margin-right: 5px;
-}
-
-.boilerplate .items-list .item img {
-  display: block;
-}
-
-.boilerplate .items-list .item-name {
-  margin: 0;
-}
-
-.boilerplate .items-list .item-controls {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 86px;
-  flex: 0 0 86px;
-  text-align: right;
-}
-/*Styling for abilities*/
-.ability {
-  color: #000;
-  border: none;
-  border-radius: 3px;
-  padding: 3px;
-  display: flex;
-}
-
-.ability input[type="text"] {
-    width: 2ch;
-    text-align: center;
-    font-size: 32pt;
-    border: 1px solid transparent;
-    height: auto;
-    min-width: auto;
-    background: none;
-    transition-duration: .2s;
-}
-
-.ability:hover input[type="text"] {
-  border: 1px solid black;
-}
-
-.ability-score-box {
-  border: 1px solid black;
-  border-radius: 2px;
-  margin-right: 5%;
-}
-
-.ability-focus-box {
-  display: grid;
-  position: relative;
-  border: 1px solid black;
-  border-radius: 2px;
+h1 {
+    border: none;
+    font-size: 31px;
+    font-weight: 200;
+    font-variation-settings: 'wght' 200;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+    text-transform: uppercase;
+    line-height: 1;
+    letter-spacing: 0.15em;
 }
 
 
-.ability-focus {
-    color: #134074;
-    padding: 3px;
-    cursor: pointer;
+.content {}
+
+.base-stats {
+    display: flex;
+    margin-bottom: 28px;
+}
+.base-stats .stat {
+    flex: 1;
+    margin-right: 11px;
+    font-weight: 800;
+}
+.base-stats .stat:last-child {
+    margin-right: 0;
+}
+.base-stats .value {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    display: grid;
+    place-items: center;
+    font-size: 22px;
+    padding: 8px 0;
+    margin-bottom: 3px;
 }
 
-.ability-focus:hover {
-  color: #46B1C9;
+.base-stats label {
+    text-transform: uppercase;
+    opacity: 0.5;
+    font-size: 11px;
+    letter-spacing: 0.1em;
 }
 
-.ability-focus-trigger {
-  background: none;
-  text-align: center;
-  width: auto;
-  padding: 0px;
-  border: none;
+
+.abilities {}
+.abilities .ability {
 }
-.ability-focus-trigger:hover {
-box-shadow: none;
+.ability .ability-score-box {
+    background: linear-gradient(
+        270deg,
+        rgba(26, 182, 226, 0.18) 74.48%,
+        rgba(26, 181, 224, 0.18) 100%
+    );
+    border-radius: 3px;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
 }
-
-.ability-focus-trigger span {
-position: relative;
-transition: .2s;
-color: black;
-padding-right: 0px;
+.ability .ability-focus-box {
+    text-align: right;
 }
-
-.ability-focus-trigger:hover span {
-  color:#46B1C9;
+.ability .ability-focus-box button {
+    text-align: right;
+    margin-bottom: 13px;
+    font-size: 13px;
+    line-height: 1;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-weight: 400;
 }
-
-/*
-Gear icon for use with configuration
-font-family: "Font Awesome 5 Free";
--webkit-font-smoothing: antialiased;
-content: '\f013';
- */
-
-
-.ability-rollable {
-}
-
-.ability-rollable:hover {
-  color: #46B1C9;
+.resource-label {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-weight: 700;
+    font-size: 14px;
 }

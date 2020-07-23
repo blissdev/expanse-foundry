@@ -11,8 +11,8 @@ export class ExpanseActorSheet extends ActorSheet {
     return mergeObject(super.defaultOptions, {
       classes: ["boilerplate", "sheet", "actor"],
       template: "systems/expanse-foundry/templates/actor/actor-sheet.html",
-      width: 650,
-      height: 600,
+      width: 665,
+      height: 865,
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }]
     });
   }
