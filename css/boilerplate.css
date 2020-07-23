@@ -5,6 +5,26 @@ body {
     font-weight: 700;
 }
 
+form .notes, form .hint {
+  color: white;
+}
+
+input[type="text"] {
+  color: white;
+}
+
+input[type="text"]::placeholder {
+  color: #7F7F7F;
+}
+
+select {
+  color: white;
+}
+
+select option {
+  background-color: #7F7F7F;
+}
+
 .window-content button {
     width: auto;
     font-family: "Exo 2", sans-serif;
