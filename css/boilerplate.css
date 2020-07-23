@@ -27,6 +27,7 @@ select option {
 
 .profile-img {
     border-radius: 6px 6px 0 0;
+    object-fit: cover;
 }
 
 .window-content button {
