@@ -50,6 +50,11 @@ export class ExpanseActorSheet extends ActorSheet {
       focusByAbility[parts[0]].push(parts[1]);
     }
 
+    // Prepare calculated values
+    console.log(actorData.data.abilities);
+    actorData.data.speed = actorData.data.abilities.dexterity.value + 10;
+    actorData.data.defense = actorData.data.abilities.dexterity.value + 10;
+    actorData.data.toughness = actorData.data.abilities.constitution.value;
     actorData.focusByAbility = focusByAbility;
   }
 
