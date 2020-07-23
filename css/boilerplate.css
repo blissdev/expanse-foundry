@@ -25,6 +25,10 @@ select option {
   background-color: #7F7F7F;
 }
 
+.profile-img {
+    border-radius: 6px 6px 0 0;
+}
+
 .window-content button {
     width: auto;
     font-family: "Exo 2", sans-serif;
