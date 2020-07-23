@@ -67,6 +67,14 @@
                         <span class="resource-label">
                             {{key}}
                         </span>
+
+                        <input
+                            type="text"
+                            name="data.abilities.{{key}}.value"
+                            value="{{ability.value}}"
+                            data-dtype="Number"
+                        />
+
                         <button type="button"
                             class="ability-mod ability-rollable"
                             data-roll="{2d6, 1d6}+@abilities.{{key}}.value"
@@ -76,6 +84,9 @@
                         </button>
                     </div>
                     <div class="ability-focus-box">
+                        <button class="ability-focus-trigger" data-label="{{key}}">
+                            <i class="fas fa-cog"></i>
+                        </button>
                         {{#each (lookup ../entity.focusByAbility [key])}}
                             <button type="button"
                                 class="ability-mod ability-focus ability-rollable"

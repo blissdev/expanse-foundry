@@ -36,6 +36,19 @@ select option {
     color: #fff;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 3px;
+    cursor: pointer;
+}
+
+.window-content input {
+    background: #fff;
+    color: #111;
+    font-weight: 700;
+    width: auto;
+    height: auto;
+}
+
+.window-content button i.fas:first-child:last-child {
+    margin-right: 0;
 }
 
 .window-app .window-content {
