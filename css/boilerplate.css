@@ -25,6 +25,15 @@ select option {
   background-color: #7F7F7F;
 }
 
+.window-content::-webkit-scrollbar-track {
+  background: #7F7F7F;
+}
+
+.window-content::-webkit-scrollbar-thumb {
+  background: #1AB6E2;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
 .window-content button {
     width: auto;
     font-family: "Exo 2", sans-serif;
