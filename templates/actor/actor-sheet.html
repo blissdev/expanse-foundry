@@ -1,4 +1,4 @@
-<form class="{{cssClass}} flexcol" autocomplete="off">
+<form class="{{cssClass}} flexcol {{actor.editingString}}" autocomplete="off">
 
     <div class="grid-container actor-sheet">
 
@@ -31,23 +31,22 @@
                 <a class="item">Ship</a>
             </nav>
 
-
-            <button type="button">Edit</button>
+            <button type="button" class="editmode-toggle">Edit</button>
         </div>
 
         <div class="content">
 
             <div class="base-stats">
                 <div class="stat">
-                    <div class="value">12</div>
+                    <div class="value">{{data.speed}}</div>
                     <label>Speed</label>
                 </div>
                 <div class="stat">
-                    <div class="value">12</div>
+                    <div class="value">{{data.defense}}</div>
                     <label>Defense</label>
                 </div>
                 <div class="stat">
-                    <div class="value">1</div>
+                    <div class="value">{{data.toughness}}</div>
                     <label>Toughness</label>
                 </div>
                 <div class="stat">
@@ -67,6 +66,15 @@
                         <span class="resource-label">
                             {{key}}
                         </span>
+
+                        <input
+                            type="text"
+                            name="data.abilities.{{key}}.value"
+                            value="{{ability.value}}"
+                            data-dtype="Number"
+                            class="edit-control"
+                        />
+
                         <button type="button"
                             class="ability-mod ability-rollable"
                             data-roll="{2d6, 1d6}+@abilities.{{key}}.value"
@@ -76,6 +84,9 @@
                         </button>
                     </div>
                     <div class="ability-focus-box">
+                        <button class="ability-focus-trigger edit-control" data-label="{{key}}">
+                            <i class="fas fa-cog"></i>
+                        </button>
                         {{#each (lookup ../entity.focusByAbility [key])}}
                             <button type="button"
                                 class="ability-mod ability-focus ability-rollable"

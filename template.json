@@ -3,7 +3,7 @@
     "types": ["character", "npc"],
     "templates": {
       "base": {
-        "name": "new character",
+        "editing": false,
         "proficientFocuses": [],
         "abilities": {
           "accuracy": {
@@ -416,6 +416,11 @@
         "fortune": {
           "value": 15
         }
+      },
+      "notes": {
+          "notes1": "",
+          "notes2": "",
+          "notes3": ""
       },
       "biography": {
         "physical description": "",
