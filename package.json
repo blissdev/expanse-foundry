@@ -1,23 +1,12 @@
 {
-  "name": "boilerplate",
-  "version": "1.0.0",
+  "name": "expanse-foundry",
+  "version": "0.0.1",
   "description": "CSS compiler for the Expanse system",
-  "scripts": {
-    "build": "gulp",
-    "compile": "gulp css",
-    "watch": "gulp",
-    "gulp": "gulp"
-  },
   "browserslist": [
-    "last 3 versions"
+    "last 2 versions"
   ],
-  "author": "John Doe",
+  "author": "Jordan Arentsen and Trevor Casterline",
   "license": "MIT",
   "private": true,
-  "dependencies": {
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1",
-    "gulp-sass": "^4.1.0",
-    "gulp-sourcemaps": "^2.6.5"
-  }
+  "dependencies": {}
 }
