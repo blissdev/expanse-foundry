@@ -38,6 +38,12 @@ select option {
     display: block;
 }
 
+.window-app .window-content {
+    padding: 22px 32px;
+    background: linear-gradient(130.41deg, #040B35 0.25%, #020F26 100.2%), #C4C4C4;
+    color: #fff;
+}
+
 .window-content::-webkit-scrollbar-track {
   background: #7F7F7F;
 }
@@ -67,12 +73,6 @@ select option {
 
 .window-content button i.fas:first-child:last-child {
     margin-right: 0;
-}
-
-.window-app .window-content {
-    padding: 22px 32px;
-    background: linear-gradient(130.41deg, #040B35 0.25%, #020F26 100.2%), #C4C4C4;
-    color: #fff;
 }
 
 .actor-sheet {

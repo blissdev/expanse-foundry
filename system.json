@@ -7,9 +7,9 @@
   "compatibleCoreVersion": "0.6.4",
   "templateVersion": 2,
   "author": "@liptrill and @blissdev",
-  "esmodules": ["module/boilerplate.js"],
-  "styles": ["css/boilerplate.css"],
-  "scripts": [],
+  "esmodules": ["module/expanse.js"],
+  "styles": ["css/expanse.css"],
+  "scripts": ["lib/live.js"],
   "packs": [],
   "languages": [
     {
