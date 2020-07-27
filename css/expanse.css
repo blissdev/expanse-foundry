@@ -230,6 +230,16 @@ h1 {
     align-items: center;
     margin-bottom: 8px;
 }
+.ability .ability-score-box button {
+    line-height: 1;
+    font-weight: 800;
+    font-size: 22px;
+    padding-bottom: 4px;
+}
+.ability .ability-score-box button:first-letter {
+    opacity: 0.5;
+    font-weight: 700;
+}
 .ability .ability-focus-box {
     text-align: right;
 }
