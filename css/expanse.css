@@ -5,6 +5,10 @@ body {
     font-weight: 700;
 }
 
+a:hover {
+    text-shadow: none;
+}
+
 form .notes, form .hint {
   color: white;
 }
@@ -23,11 +27,6 @@ select {
 
 select option {
   background-color: #7F7F7F;
-}
-
-.profile-img {
-    border-radius: 6px 6px 0 0;
-    object-fit: cover;
 }
 
 .edit-control {
@@ -88,7 +87,6 @@ select option {
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-
 .mce-content-body {
     color: white;
 }
@@ -101,12 +99,6 @@ select option {
     background: #fff;
 }
 
-.actor-sheet {
-    display: grid;
-    grid-template: 65px 1fr / 138px 1fr;
-    column-gap: 33px;
-    grid-row-gap: 20px;
-}
 
 h1 {
     border: none;
@@ -120,8 +112,80 @@ h1 {
 }
 
 
-.content {}
+/*
+ * CHARACTER SHEET
+ */
+.actor-sheet {
+    display: grid;
+    grid-template: 65px 1fr / 138px 1fr;
+    column-gap: 33px;
+    grid-row-gap: 20px;
+}
 
+/* global */
+.global {}
+
+.profile-img {
+    border-width: 0;
+    border-radius: 6px 6px 0 0;
+    object-fit: cover;
+}
+.character-global {}
+
+.character-global .stats {
+    position: relative;
+    top: -2px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 0 0 6px 6px;
+}
+.character-global .stats dl,
+.character-global .stats dt,
+.character-global .stats dd {
+    margin: 0;
+    line-height: 1;
+}
+
+.character-global .stats dl {
+    margin: 0;
+    padding: 10px 20px;
+    
+    display: flex;
+}
+.character-global .stats dd {
+    text-align: right;
+    font-size: 22px;
+}
+.character-global .stats dt {
+    padding-left: 4px;
+    padding-top: 2px;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: #1AB6E2;
+}
+.character-global .stats dt + dd {
+    margin-left: 20px;
+}
+
+.global nav.tabs {
+    margin: 30px 12px;
+    flex-direction: column;
+}
+.global nav a.item {
+    text-align: right;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.17em;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+.global nav a.item.active,
+.global nav a.item:hover {
+    text-shadow: none;
+    color: #A166CC;
+}
+
+/* action tab */
 .base-stats {
     display: flex;
     margin-bottom: 28px;
@@ -143,7 +207,6 @@ h1 {
     padding: 8px 0;
     margin-bottom: 3px;
 }
-
 .base-stats label {
     text-transform: uppercase;
     opacity: 0.5;
@@ -153,8 +216,7 @@ h1 {
 
 
 .abilities {}
-.abilities .ability {
-}
+.abilities .ability {}
 .ability .ability-score-box {
     background: linear-gradient(
         270deg,
