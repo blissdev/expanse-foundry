@@ -75,6 +75,24 @@ select option {
     margin-right: 0;
 }
 
+.editor-content {
+    color: white;
+}
+
+.editor-content::-webkit-scrollbar-track {
+  background: #7F7F7F;
+}
+
+.editor-content::-webkit-scrollbar-thumb {
+  background: #1AB6E2;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+.mce-content-body {
+    color: white;
+}
+
 .actor-sheet {
     display: grid;
     grid-template: 65px 1fr / 138px 1fr;
