@@ -93,8 +93,8 @@ select option {
     color: white;
 }
 
-.window-content .editor {
-    min-height: 200px;
+.window-content .editor, .tox.tox-tinymce {
+    min-height: 150px;
 }
 
 .tox.tox-tinymce .tox-edit-area__iframe {

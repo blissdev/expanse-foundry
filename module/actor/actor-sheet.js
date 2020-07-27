@@ -13,7 +13,7 @@ export class ExpanseActorSheet extends ActorSheet {
       template: "systems/expanse-foundry/templates/actor/actor-sheet.html",
       width: 665,
       height: 865,
-      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }]
+      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "action" }]
     });
   }
 
