@@ -93,6 +93,14 @@ select option {
     color: white;
 }
 
+.window-content .editor {
+    min-height: 200px;
+}
+
+.tox.tox-tinymce .tox-edit-area__iframe {
+    background: #fff;
+}
+
 .actor-sheet {
     display: grid;
     grid-template: 65px 1fr / 138px 1fr;
