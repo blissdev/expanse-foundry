@@ -416,6 +416,9 @@
         "fortune": {
           "value": 15
         }
+        "fortuneTotal": {
+          "value": 15
+        }
       },
       "stunt_points": 0,
       "notes": {

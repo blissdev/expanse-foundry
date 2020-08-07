@@ -37,6 +37,10 @@ select option {
     display: block;
 }
 
+.window-content .auxiliary input {
+    width: 3ch;
+}
+
 .window-app .window-content {
     padding: 22px 32px;
     background: linear-gradient(130.41deg, #040B35 0.25%, #020F26 100.2%), #C4C4C4;
