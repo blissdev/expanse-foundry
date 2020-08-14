@@ -47,7 +47,15 @@
                     <dl>
                         <dd>{{data.attributes.level.value}}</dd>
                         <dt>lvl</dt>
-                        <dd>{{data.attributes.income.value}}</dd>
+                        <dd>
+                            <button type="button"
+                                class="ability-rollable"
+                                data-roll="{2d6, 1d6}+{{data.attributes.income.value}}"
+                                data-label="Income"
+                            >
+                                {{data.attributes.income.value}}
+                            </button>
+                        </dd>
                         <dt>
                             <svg width="20" height="10" viewBox="0 0 25 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M13.5 1H4.5L2.5 5H11.5L13.5 1Z" stroke="#1AB6E2" stroke-width="2"/>
