@@ -22,25 +22,32 @@
                 data-dtype="Number"
             />
             </div>
-            <div>
-            <label for="data.stunt_points">stunt points</label>
-            <input
-                type="text"
-                name="data.stunt_points"
-                value="{{data.stunt_points}}"
-                data-dtype="Number"
-            />
-            </div>
         </div>
 
         <div class="global">
             <div class="character-global">
                 <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="138" width="141"/>
+                <div class="edit-stats edit-control">
+                    <label for="data.attributes.level.value">Level</label>
+                    <input
+                        type="text"
+                        name="data.attributes.level.value"
+                        value="{{data.attributes.level.value}}"
+                        data-dtype="Number"
+                    />
+                    <label for="data.attributes.fortuneTotal.value">Income</label>
+                    <input
+                        type="text"
+                        name="data.attributes.income.value"
+                        value="{{data.attributes.income.value}}"
+                        data-dtype="Number"
+                    />
+                </div>
                 <div class="stats">
                     <dl>
-                        <dd>1</dd>
+                        <dd>{{data.attributes.level.value}}</dd>
                         <dt>lvl</dt>
-                        <dd>3</dd>
+                        <dd>{{data.attributes.income.value}}</dd>
                         <dt>
                             <svg width="20" height="10" viewBox="0 0 25 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M13.5 1H4.5L2.5 5H11.5L13.5 1Z" stroke="#1AB6E2" stroke-width="2"/>
