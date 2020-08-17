@@ -13,7 +13,14 @@ export class ExpanseActorSheet extends ActorSheet {
       template: "systems/expanse-foundry/templates/actor/actor-sheet.html",
       width: 665,
       height: 865,
-      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "action" }]
+      tabs: [{
+        navSelector: ".sheet-tabs",
+        contentSelector: ".sheet-body",
+        initial: "action",
+        callback: () => {
+          console.log(arguments);
+        }
+      }]
     });
   }
 
@@ -119,6 +126,8 @@ export class ExpanseActorSheet extends ActorSheet {
   /** @override */
   activateListeners(html) {
     super.activateListeners(html);
+
+    // initialize first tab
 
     // Everything below here is only needed if the sheet is editable
     if (!this.options.editable) return;

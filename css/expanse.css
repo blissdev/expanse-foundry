@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@200;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@200..700&display=swap');
 
 body {
     font-family: "Exo 2", sans-serif;
@@ -104,15 +104,20 @@ select option {
 }
 
 
-h1 {
+h1, h2 {
     border: none;
-    font-size: 1.55em;
+}
+
+.actor-sheet h1 {
+    border: none;
+    font-size: 2.4em;
     font-weight: 200;
     font-variation-settings: 'wght' 200;
     text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
     text-transform: uppercase;
-    line-height: 1.4;
+    line-height: 1;
     letter-spacing: 0.15em;
+    margin-bottom: 30px;
 }
 
 /*
@@ -120,9 +125,8 @@ h1 {
  */
 .actor-sheet {
     display: grid;
-    grid-template: 65px 1fr / 138px 1fr;
+    grid-template-columns: 138px 1fr;
     column-gap: 33px;
-    grid-row-gap: 20px;
 }
 
 /* global */
@@ -188,6 +192,24 @@ h1 {
     color: #A166CC;
 }
 
+.content {}
+.content .sheet-body {
+    position: relative;
+}
+
+.content .tab[data-tab] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    visibility: hidden;
+}
+.content .tab[data-tab].active {
+    display: block;
+    visibility: visible;
+}
+
 /* action tab */
 .base-stats {
     display: flex;
@@ -219,7 +241,22 @@ h1 {
 
 
 .abilities {}
-.abilities .ability {}
+.abilities .ability {
+    opacity: 0;
+    transition: opacity 500ms;
+}
+.tab.active .abilities .ability {
+    opacity: 1;
+}
+.tab.active .abilities .ability:nth-child(2) { transition-delay: 50ms; }
+.tab.active .abilities .ability:nth-child(3) { transition-delay: 100ms; }
+.tab.active .abilities .ability:nth-child(4) { transition-delay: 150ms; }
+.tab.active .abilities .ability:nth-child(5) { transition-delay: 200ms; }
+.tab.active .abilities .ability:nth-child(6) { transition-delay: 250ms; }
+.tab.active .abilities .ability:nth-child(7) { transition-delay: 300ms; }
+.tab.active .abilities .ability:nth-child(8) { transition-delay: 350ms; }
+.tab.active .abilities .ability:nth-child(9) { transition-delay: 400ms; }
+
 .ability .ability-score-box {
     background: linear-gradient(
         270deg,
@@ -260,4 +297,40 @@ h1 {
     letter-spacing: 0.2em;
     font-weight: 700;
     font-size: 14px;
+}
+
+.dialog-content {
+    font-weight: 400;
+    line-height: 1.5;
+}
+.dialog-content h1 {}
+
+.dialog-content p {
+    margin: 1rem 0;
+}
+
+#focus-selection ul {
+    padding: 0;
+    list-style-type: none;
+}
+#focus-selection ul li {
+    margin-bottom: 1em;
+}
+
+#focus-selection .focus-select {
+    display: flex;
+}
+#focus-selection .focus-select dt {
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1;
+    margin-bottom: 0.3rem;
+}
+#focus-selection .focus-select dl,
+#focus-selection .focus-select dd {
+    margin: 0;
+}
+#focus-selection .focus-select input {
+    padding: 0;
+    margin-left: 0;
 }

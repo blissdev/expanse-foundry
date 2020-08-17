@@ -2,28 +2,6 @@
 
     <div class="grid-container actor-sheet">
 
-        <div class="character-id">
-            <input type="text" name="name" value="{{actor.name}}" class="edit-control" />
-            <h1>{{actor.name}}</h1>
-        </div>
-
-        <div class="auxiliary">
-            <div>
-            <label for="data.attributes.fortune.value">fortune</label>
-            <input
-                type="text"
-                name="data.attributes.fortune.value"
-                value="{{data.attributes.fortune.value}}"
-                data-dtype="Number"
-            /> / <input
-                type="text"
-                name="data.attributes.fortuneTotal.value"
-                value="{{data.attributes.fortuneTotal.value}}"
-                data-dtype="Number"
-            />
-            </div>
-        </div>
-
         <div class="global">
             <div class="character-global">
                 <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="138" width="141"/>
@@ -65,6 +43,21 @@
                             </svg>
                         </dt>
                     </dl>
+
+                    <div>
+                        <label for="data.attributes.fortune.value">fortune</label>
+                        <input
+                            type="text"
+                            name="data.attributes.fortune.value"
+                            value="{{data.attributes.fortune.value}}"
+                            data-dtype="Number"
+                        /> / <input
+                            type="text"
+                            name="data.attributes.fortuneTotal.value"
+                            value="{{data.attributes.fortuneTotal.value}}"
+                            data-dtype="Number"
+                        />
+                    </div>
                 </div>
             </div>
 
@@ -80,96 +73,101 @@
             <button type="button" class="editmode-toggle">Edit</button>
         </div>
 
-        <div class="content sheet-body">
+        <div class="content">
 
-            <div class="tab action" data-group="primary" data-tab="action">
+            <input type="text" name="name" value="{{actor.name}}" class="edit-control" />
+            <h1>{{actor.name}}</h1>
 
-                <div class="base-stats">
-                    <div class="stat">
-                        <div class="value">{{data.speed}}</div>
-                        <label>Speed</label>
-                    </div>
-                    <div class="stat">
-                        <div class="value">{{data.defense}}</div>
-                        <label>Defense</label>
-                    </div>
-                    <div class="stat">
-                        <div class="value">{{data.toughness}}</div>
-                        <label>Toughness</label>
-                    </div>
-                    <div class="stat">
-                        <div class="value">0</div>
-                        <label>Armor</label>
-                    </div>
-                    <div class="stat">
-                        <div class="value">0</div>
-                        <label>Penalty</label>
-                    </div>
-                </div>
+            <div class="sheet-body">
+                <div class="tab action" data-group="primary" data-tab="action">
 
-                <div class="abilities">
-                    {{#each data.abilities as |ability key|}}
-                      <div class="ability">
-                        <div class="ability-score-box">
-                            <span class="resource-label">
-                                {{key}}
-                            </span>
-
-                            <input
-                                type="text"
-                                name="data.abilities.{{key}}.value"
-                                value="{{ability.value}}"
-                                data-dtype="Number"
-                                class="edit-control"
-                            />
-
-                            <button type="button"
-                                class="ability-mod ability-rollable"
-                                data-roll="{2d6, 1d6}+@abilities.{{key}}.value"
-                                data-label="{{key}}" data-mod="{{ability.value}}"
-                            >
-                                {{numberFormat ability.value decimals=0 sign=true}}
-                            </button>
+                    <div class="base-stats">
+                        <div class="stat">
+                            <div class="value">{{data.speed}}</div>
+                            <label>Speed</label>
                         </div>
-                        <div class="ability-focus-box">
-                            <button class="ability-focus-trigger edit-control" data-label="{{key}}">
-                                <i class="fas fa-cog"></i>
-                            </button>
-                            {{#each (lookup ../entity.focusByAbility [key])}}
+                        <div class="stat">
+                            <div class="value">{{data.defense}}</div>
+                            <label>Defense</label>
+                        </div>
+                        <div class="stat">
+                            <div class="value">{{data.toughness}}</div>
+                            <label>Toughness</label>
+                        </div>
+                        <div class="stat">
+                            <div class="value">0</div>
+                            <label>Armor</label>
+                        </div>
+                        <div class="stat">
+                            <div class="value">0</div>
+                            <label>Penalty</label>
+                        </div>
+                    </div>
+
+                    <div class="abilities">
+                        {{#each data.abilities as |ability key|}}
+                          <div class="ability">
+                            <div class="ability-score-box">
+                                <span class="resource-label">
+                                    {{key}}
+                                </span>
+
+                                <input
+                                    type="text"
+                                    name="data.abilities.{{key}}.value"
+                                    value="{{ability.value}}"
+                                    data-dtype="Number"
+                                    class="edit-control"
+                                />
+
                                 <button type="button"
-                                    class="ability-mod ability-focus ability-rollable"
-                                    data-roll="{2d6, 1d6}+@abilities.{{key}}.value+2"
-                                    data-label="{{key}}" data-proficiency={{this}}
-                                    data-mod="{{ability.value}}"
+                                    class="ability-mod ability-rollable"
+                                    data-roll="{2d6, 1d6}+@abilities.{{key}}.value"
+                                    data-label="{{key}}" data-mod="{{ability.value}}"
                                 >
-                                    {{this}}
+                                    {{numberFormat ability.value decimals=0 sign=true}}
                                 </button>
-                            {{/each}}
-                        </div>
-                      </div>
-                    {{/each}}
+                            </div>
+                            <div class="ability-focus-box">
+                                <button class="ability-focus-trigger edit-control" data-label="{{key}}">
+                                    <i class="fas fa-cog"></i>
+                                </button>
+                                {{#each (lookup ../entity.focusByAbility [key])}}
+                                    <button type="button"
+                                        class="ability-mod ability-focus ability-rollable"
+                                        data-roll="{2d6, 1d6}+@abilities.{{key}}.value+2"
+                                        data-label="{{key}}" data-proficiency={{this}}
+                                        data-mod="{{ability.value}}"
+                                    >
+                                        {{this}}
+                                    </button>
+                                {{/each}}
+                            </div>
+                          </div>
+                        {{/each}}
+                    </div>
+
                 </div>
+                {{!-- /action --}}
+
+                <div class="tab social" data-group="primary" data-tab="social">
+
+                    <h2>Social</h2>
+
+                </div>
+                {{!-- /social --}}
+
+                <div class="tab background" data-group="primary" data-tab="background">
+
+                    <h2>Background</h2>
+
+                    <label>Biography</label>
+                    {{editor content=data.biography target="data.biography" button=true owner=owner editable=editable}}
+
+                </div>
+                {{!-- /background --}}
 
             </div>
-            {{!-- /action --}}
-
-            <div class="tab social" data-group="primary" data-tab="social">
-
-                <h2>Social</h2>
-
-            </div>
-            {{!-- /social --}}
-
-            <div class="tab background" data-group="primary" data-tab="background">
-
-                <h2>Background</h2>
-
-                <label>Biography</label>
-                {{editor content=data.biography target="data.biography" button=true owner=owner editable=editable}}
-
-            </div>
-            {{!-- /background --}}
-
 
         </div>
 
