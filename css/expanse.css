@@ -94,6 +94,10 @@ select option {
   background: #1AB6E2;
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
+.editor-content p {
+    font-weight: 400;
+    line-height: 1.5;
+}
 
 .mce-content-body {
     color: white;
