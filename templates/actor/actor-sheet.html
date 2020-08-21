@@ -156,6 +156,9 @@
 
                     <h2>Social</h2>
 
+                    <label>Relationships</label>
+                    {{editor content=data.background.relationships target="data.background.relationships" button=true owner=owner editable=editable}}
+
                 </div>
                 {{!-- /social --}}
 
@@ -165,6 +168,16 @@
 
                     <label>Biography</label>
                     {{editor content=data.biography target="data.biography" button=true owner=owner editable=editable}}
+
+                </div>
+                {{!-- /background --}}
+
+                <div class="tab background" data-group="primary" data-tab="equipment">
+
+                    <h2>Equipment</h2>
+
+                    <label>Equipment</label>
+                    {{editor content=data.equipment.other target="data.equipment.other" button=true owner=owner editable=editable}}
 
                 </div>
                 {{!-- /background --}}

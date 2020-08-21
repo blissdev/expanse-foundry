@@ -396,7 +396,8 @@
         "equipment": {
           "weapons": [],
           "armor": [],
-          "gear": []
+          "gear": [],
+          "other": ""
         },
         "favored stunts": []
       }
